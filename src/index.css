@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+*{
+    color:#fff;
+}
+body{
+    background-color:#111;
+}
+
+#tasklist::-webkit-scrollbar {
+  height: 6px;
+}
+
+#tasklist::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-radius: 10px;
+}
+
+#tasklist::-webkit-scrollbar-thumb {
+  background: #545450;
+  border-radius: 10px;
+}
+
+#tasklist::-webkit-scrollbar-thumb:hover {
+  background: #9a9995;
+}
+textarea ,input{
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
