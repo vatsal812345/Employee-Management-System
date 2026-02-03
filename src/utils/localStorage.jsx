@@ -1,5 +1,3 @@
-localStorage.clear()
-
 const employees = [
   {
     id: 1,
@@ -9,7 +7,7 @@ const employees = [
 
     taskNumbers: {
       active: 2,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 0
     },
@@ -17,7 +15,7 @@ const employees = [
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Design Dashboard UI",
@@ -56,7 +54,7 @@ const employees = [
 
     taskNumbers: {
       active: 1,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 1
     },
@@ -64,7 +62,7 @@ const employees = [
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Create Task Form",
@@ -103,7 +101,7 @@ const employees = [
 
     taskNumbers: {
       active: 1,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 1
     },
@@ -111,7 +109,7 @@ const employees = [
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Employee CRUD",
@@ -150,7 +148,7 @@ const employees = [
 
     taskNumbers: {
       active: 1,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 1
     },
@@ -158,7 +156,7 @@ const employees = [
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Chart Integration",
@@ -197,7 +195,7 @@ const employees = [
 
     taskNumbers: {
       active: 1,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 1
     },
@@ -205,7 +203,7 @@ const employees = [
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Notification System",
@@ -247,14 +245,14 @@ const admin = [
 ];
 
 export const setLocalStorage = () => {
-    localStorage.setItem('employees', JSON.stringify(employees))
-    localStorage.setItem('admin', JSON.stringify(admin))
+  localStorage.setItem('employees', JSON.stringify(employees))
+  localStorage.setItem('admin', JSON.stringify(admin))
 }
 
 export const getLocalStorage = () => {
 
-    const employees = JSON.parse(localStorage.getItem('employees'))
-    const admin = JSON.parse(localStorage.getItem('admin'))
-    
-    return {employees, admin}
+  const employees = JSON.parse(localStorage.getItem('employees'))
+  const admin = JSON.parse(localStorage.getItem('admin'))
+
+  return { employees, admin }
 }
